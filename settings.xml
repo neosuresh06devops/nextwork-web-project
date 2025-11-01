@@ -1,0 +1,31 @@
+<settings>
+<servers>
+  <server>
+    <id>devops-domain-devops-domain-repo</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>devops-domain-devops-domain-repo</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>devops-domain-devops-domain-repo</id>
+        <url>https://devops-domain-888634057735.d.codeartifact.us-west-2.amazonaws.com/maven/devops-domain-repo/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>devops-domain-devops-domain-repo</id>
+    <name>devops-domain-devops-domain-repo</name>
+    <url>https://devops-domain-888634057735.d.codeartifact.us-west-2.amazonaws.com/maven/devops-domain-repo/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
